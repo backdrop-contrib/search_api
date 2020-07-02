@@ -180,6 +180,25 @@ class SearchApiIndex extends Entity {
   }
 
   /**
+   * Checks if the entity has a certain exportable status.
+   *
+   * @param $status
+   *   A status constant, i.e. one of ENTITY_CUSTOM, ENTITY_IN_CODE,
+   *   ENTITY_OVERRIDDEN or ENTITY_FIXED.
+   *
+   * @return bool
+   *   For exportable entities TRUE if the entity has the status, else FALSE.
+   *   In case the entity is not exportable, NULL is returned.
+   *
+   * @see entity_has_status()
+   */
+  public function hasStatus($status) {
+    if (!empty($this->entityInfo['exportable'])) {
+      return isset($this->{$this->statusKey}) && ($this->{$this->statusKey} & $status) == $status;
+    }
+  }
+
+  /**
    * Execute necessary tasks for a newly created index.
    */
   public function postCreate() {
