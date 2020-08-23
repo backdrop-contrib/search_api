@@ -1017,9 +1017,6 @@ function search_api_admin_index_view(SearchApiIndex $index, $action = NULL) {
  * @ingroup themeable
  */
 function theme_search_api_index(array $variables) {
-
- dpm($variables);
-
   $machine_name = $variables['machine_name'];
   $description = $variables['description'];
   $enabled = $variables['enabled'];
