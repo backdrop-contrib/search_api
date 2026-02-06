@@ -29,6 +29,9 @@ CREDITS:
 ---------------
 - Ported to Backdrop by [docwilmot](https://github.com/docwilmot).
 - Maintainer on Drupal is [drunken monkey](https://www.drupal.org/u/drunken-monkey).
+- **Search API Multi** has been ported to Backdrop by
+  [Laryn Kragt Bakker](https://github.com/laryn) and merged into this module; it
+  was also maintained for Drupal 7 by [drunken monkey](https://www.drupal.org/u/drunken-monkey).
 
 LICENSE:
 ---------------
